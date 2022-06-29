@@ -29,12 +29,9 @@ export class PersonalInformation {
         emailPers: string
     ) {
         await this.page.waitForLoadState('domcontentloaded')
-        await this.firstName.click()
-        await this.page.keyboard.type(namePers, { delay: 200 })
-        await this.lastName.click()
-        await this.page.keyboard.type(lastPers, { delay: 200 })
-        await this.email.click()
-        await this.page.keyboard.type(emailPers, { delay: 200 })
+        await this.firstName.type(namePers, { delay: 200 })
+        await this.lastName.type(lastPers, { delay: 200 })
+        await this.email.type(emailPers, { delay: 200 })
         await this.donateButton.click()
     }
 }
